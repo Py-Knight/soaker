@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="viewport" content="text/html; charset=UTF-8; width=device-width, initial-scale-1.0">
+<title>Soaker</title>
+<style type="text/css">
+
+
+.main-border {
+border: 2px solid lightgray;
+border-radius: 10px;
+width: 300px;
+text-align: center;
+margin: auto;
+margin-top: 15px;
+}
+	                
+.footer{
+   text-align: center;
+   background-color: lightgray;
+   opacity: 0.5;
+   
+}
+
+.startdiv {
+text-align: center;
+font-weight: bold;
+}
+
+.soakdiv {
+text-align: center;
+font-weight: bold;
+}
+
+.enddiv {
+text-align: center;
+font-weight: bold;
+}
+    
+.resdiv {
+
+text-align: center;
+margin: auto;
+
+}
+
+.timediv {
+text-align: center;
+}
+
+.soaktimesdiv {
+text-align: center;
+}
+
+.butdiv {
+text-align: center;
+}
+                                        
+</style>
+
+</head>
+<body>
+    
+<form action="" method="GET">
+    <div class="container">
+        <div class="main-border">	
+            <h2 style="color:blue;text-align:center;">SOAKER</h2>
+            <h3 style="text-align:center;">Soak Time Calculator</h3>
+            <p style="text-align:center;"></p>
+                <div class="startdiv">
+                    <label id="start" >Soak Start</label> 
+                </div>
+                
+                <div class="timediv">
+                    <input type="time" id="start_time" name="start_time" required>
+                </div>
+                <br> 
+                <div class="soakdiv">
+                    <label id="soak" >Soak Duration</label> 
+                </div>
+                
+                <div class="soaktimesdiv">
+                <select id="duration" name="duration">
+                    <option value="50">50</option>
+                    <option value="55">55</option>
+                    <option value="180">180</option>
+                    <option value="210">210</option>
+                    <option value="220">220</option>
+                    <option value="240">240</option>
+                </select>
+                </div>
+                <br>
+                <div class="enddiv">
+                    <label id="end" >Soak End</label>
+                </div>
+                <div class="resdiv"> 
+                    <p>{{ disp_result[0] }}</p>   
+                </div>
+                
+                <div class="butdiv">
+                    <input type="submit" value="Calculate">
+                </div>
+                <br>
+                <div class="footer">
+                <br>
+                        Created by:<br> Stephen J Smith <br>&copy2021 <br>
+                <br>		
+            </div>
+        </div>
+    </div>
+</form>
+  
+  
+</body>
+</html>
