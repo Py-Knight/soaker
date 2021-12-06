@@ -1,4 +1,4 @@
-# soaker
+# Soaker
 A simple web app to calculate the finish time of an industrial furnace process.
 
 I created this app to make life easier for myself and fellow Operatives in a previous role, working within the Aerospace sector.
