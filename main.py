@@ -11,15 +11,13 @@ app = Flask(__name__)
 @app.route('/')
 def soaker():
     disp_result.clear()
-    dur = request.args.get("duration", "")
+    dur = request.args.get("duration")
     if dur:
-        run = calc()
-    else:
-        run = ""
+        calc()
                
     return render_template('soaker.html', disp_result=disp_result)
 
-@app.route("/")
+
 def calc():
     st = request.args.get("start_time", "")
     dur = request.args.get("duration")
