@@ -1,5 +1,4 @@
 from flask import Flask, render_template, request
-import sys
 from datetime import datetime, timedelta
 
 disp_result = []
