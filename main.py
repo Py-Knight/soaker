@@ -1,32 +1,32 @@
 from flask import Flask, render_template, request
 from datetime import datetime, timedelta
 
-disp_result = []
+display_result = []
 
 app = Flask(__name__)
 
 
 @app.route('/')
 def soaker():
-    disp_result.clear()
-    dur = request.args.get("duration")
-    if dur:
-        calc()
+    display_result.clear()
+    duration = request.args.get("duration")
+    if duration:
+        calculate_soak()
                
-    return render_template('soaker.html', disp_result=disp_result)
+    return render_template('soaker.html', display_result=display_result)
 
 
-def calc():
-    st = request.args.get("start_time", "")
-    dur = request.args.get("duration")
-    stc = (str(st))
-    durc = (str(dur))
+def calculate_soak():
+    start = request.args.get("start_time", "")
+    duration = request.args.get("duration")
+    started = (str(start))
+    period = (str(duration))
     formatter = '%H:%M'
-    dt = datetime.strptime(stc, formatter)
-    soaktime = timedelta(minutes=+int(durc))
+    dt = datetime.strptime(started, formatter)
+    soaktime = timedelta(minutes=+int(period))
     endsoak = dt + soaktime
     result = endsoak.strftime("%H:%M")
-    disp_result.append(result)
+    display_result.append(result)
     
 
 if __name__ == "__main__":
